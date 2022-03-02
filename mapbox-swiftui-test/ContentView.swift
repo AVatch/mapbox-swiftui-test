@@ -6,11 +6,22 @@
 //
 
 import SwiftUI
+import MapboxMaps
 
 struct ContentView: View {
+    
+    @State private var camera = Camera(center: CLLocationCoordinate2D(latitude: 40, longitude: -75), zoom: 14)
+    @State private var styleURI = StyleURI.streets
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            
+            SwiftUIMapView(
+                mapInitOptions: MapInitOptions(), camera: $camera
+            ).styleURI(styleURI)
+            
+        }
     }
 }
 

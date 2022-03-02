@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C59701827CFFE6A003AFA96 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 5C59701727CFFE6A003AFA96 /* MapboxMaps */; };
+		5C59701A27CFFEA3003AFA96 /* SwiftUIMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C59701927CFFEA3003AFA96 /* SwiftUIMapView.swift */; };
 		5CB5A80D27CEABFA00062DB1 /* mapbox_swiftui_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5A80C27CEABFA00062DB1 /* mapbox_swiftui_testApp.swift */; };
 		5CB5A80F27CEABFA00062DB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5A80E27CEABFA00062DB1 /* ContentView.swift */; };
 		5CB5A81127CEABFB00062DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB5A81027CEABFB00062DB1 /* Assets.xcassets */; };
@@ -14,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C59701927CFFEA3003AFA96 /* SwiftUIMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapView.swift; sourceTree = "<group>"; };
 		5CB5A80927CEABFA00062DB1 /* mapbox-swiftui-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mapbox-swiftui-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB5A80C27CEABFA00062DB1 /* mapbox_swiftui_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapbox_swiftui_testApp.swift; sourceTree = "<group>"; };
 		5CB5A80E27CEABFA00062DB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C59701827CFFE6A003AFA96 /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +59,7 @@
 				5CB5A80E27CEABFA00062DB1 /* ContentView.swift */,
 				5CB5A81027CEABFB00062DB1 /* Assets.xcassets */,
 				5CB5A81227CEABFB00062DB1 /* Preview Content */,
+				5C59701927CFFEA3003AFA96 /* SwiftUIMapView.swift */,
 			);
 			path = "mapbox-swiftui-test";
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = "mapbox-swiftui-test";
+			packageProductDependencies = (
+				5C59701727CFFE6A003AFA96 /* MapboxMaps */,
+			);
 			productName = "mapbox-swiftui-test";
 			productReference = 5CB5A80927CEABFA00062DB1 /* mapbox-swiftui-test.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 5CB5A80027CEABFA00062DB1;
+			packageReferences = (
+				5C59701627CFFE6A003AFA96 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			productRefGroup = 5CB5A80A27CEABFA00062DB1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CB5A80F27CEABFA00062DB1 /* ContentView.swift in Sources */,
+				5C59701A27CFFEA3003AFA96 /* SwiftUIMapView.swift in Sources */,
 				5CB5A80D27CEABFA00062DB1 /* mapbox_swiftui_testApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C59701627CFFE6A003AFA96 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C59701727CFFE6A003AFA96 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C59701627CFFE6A003AFA96 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CB5A80127CEABFA00062DB1 /* Project object */;
 }
